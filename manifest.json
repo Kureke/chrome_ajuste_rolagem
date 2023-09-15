@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Ajuste de rolagem para sites de leitura em sites de mangás",
+  "version": "1.0",
+  "description": "Ajusta a rolagem em sites específicos.",
+  "author": "Kureke - https://github.com/Kureke/chrome_ajuste_rolagemo",
+  "permissions": ["activeTab", "storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://prismascans.net/*"],
+      "js": ["prismascans.js"]
+    },
+    {
+      "matches": ["https://neoxscan.net/*"],
+      "js": ["neoxscan.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
